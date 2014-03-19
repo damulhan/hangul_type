@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"> 
+  <title>Hangul Type</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="kword"></div>
+    <audio autoplay id="kaudio" src="" type="audio/mpeg">
+    </audio>  
+    <div id="english"></div>
+    <input id="write" rows="6" cols="60"></textarea>
+    <ul class="keyboard">
+      <li class="symbol"><span class="off">`</span><span class="on">~</span></li>
+      <li class="symbol"><span class="off">1</span><span class="on">!</span></li>
+      <li class="symbol"><span class="off">2</span><span class="on">@</span></li>
+      <li class="symbol"><span class="off">3</span><span class="on">#</span></li>
+      <li class="symbol"><span class="off">4</span><span class="on">$</span></li>
+      <li class="symbol"><span class="off">5</span><span class="on">%</span></li>
+      <li class="symbol"><span class="off">6</span><span class="on">^</span></li>
+      <li class="symbol"><span class="off">7</span><span class="on">&</span></li>
+      <li class="symbol"><span class="off">8</span><span class="on">*</span></li>
+      <li class="symbol"><span class="off">9</span><span class="on">(</span></li>
+      <li class="symbol"><span class="off">0</span><span class="on">)</span></li>
+      <li class="symbol"><span class="off">-</span><span class="on">_</span></li>
+      <li class="symbol"><span class="off">=</span><span class="on">+</span></li>
+      <li class="backspace last"><span>Backspace</span></li>
+
+      <li class="tab"><span>Tab</span></li>
+      <li class="pinky multiple"><span class="off">ㅂ</span><span class="on">ㅃ</span></li>
+      <li class="ring multiple"><span class="off">ㅈ</span><span class="on">ㅉ</span></li>
+      <li class="middle multiple"><span class="off">ㄷ</span><span class="on">ㄸ</span></li>
+      <li class="index multiple"><span class="off">ㄱ</span><span class="on">ㄲ</span></li>
+      <li class="index multiple"><span class="off">ㅅ</span><span class="on">ㅆ</span></li>
+      <li class="index"><span class="off">ㅛ</span></li>
+      <li class="index"><span class="off">ㅕ</span></li>
+      <li class="middle"><span class="off">ㅑ</span></li>
+      <li class="ring multiple"><span class="off">ㅐ</span><span class="on">ㅒ</span></li>
+      <li class="pinky multiple"><span class="off">ㅔ</span><span class="on">ㅖ</span></li>
+      <li class="symbol"><span class="off">[</span><span class="on">{</span></li>
+      <li class="symbol"><span class="off">]</span><span class="on">}</span></li>
+      <li class="last"><span class="off">\</span><span class="on">|</span></li>
+
+      <li class="capslock"><span>Caps Lock</span></li>
+      <li class="pinky home"><span class="off">ㅁ</span></li>
+      <li class="ring home"><span class="off">ㄴ</span></li>
+      <li class="middle home"><span class="off">ㅇ</span></li>
+      <li class="index home"><span class="off">ㄹ</span></li>
+      <li class="index"><span class="off">ㅎ</span></li>
+      <li class="index"><span class="off">ㅗ</span></li>
+      <li class="index home"><span class="off">ㅓ</span></li>
+      <li class="middle home"><span class="off">ㅏ</span></li>
+      <li class="ring home"><span class="off">ㅣ</span></li>
+      <li class="pinky home"><span class="off">;</span><span class="on">:</span></li>
+      <li><span class="off">'</span><span class="on">"</span></li>
+      <li class="last enter"><span>Enter</span></li>
+
+      <li class="left-shift"><span class="off">Shift</span></li>
+      <li class="pinky"><span class="off">ㅋ</span></li>
+      <li class="ring"><span class="off">ㅌ</span></li>
+      <li class="middle"><span class="off">ㅊ</span></li>
+      <li class="index"><span class="off">ㅍ</span></li>
+      <li class="index"><span class="off">ㅠ</span></li>
+      <li class="index"><span class="off">ㅜ</span></li>
+      <li class="index"><span class="off">ㅡ</span></li>
+      <li class="middle"><span class="off">,</span></li>
+      <li class="ring"><span class="off">.</span></li>
+      <li class="pinky"><span class="off">/</span></li>
+      <li class="right-shift"><span class="off">Shift</span></li>
+    </ul>
+  </div>
+
+  <script src="vocab_list.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="buzz.min.js"></script>
+  <script src="hangulime.min.js"></script>
+  <script>
+    $('#write').hangulime();
+  </script>
+  <script src="keyboard.min.js"></script>
+  <script src="application.js"></script>
+    
+</body>
+</html>
