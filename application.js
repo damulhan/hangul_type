@@ -4,6 +4,7 @@ var shift = false;
 // Set sounds for answer feedback.
 var wrong = new buzz.sound(["./audio/Wrong.ogg"]);
 var correct = new buzz.sound(["./audio/Correct.ogg"]);
+var kaudio
 
 // Shake effect from https://gist.github.com/hzlzh/3270711
 jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
@@ -66,7 +67,7 @@ $(document).ready(function() {
 // Show the next word and play audio.
 function nextWord() {
   var word = setOne.random();
-  var kaudio = new buzz.sound(["./audio/" + word[1]]);
+  kaudio = new buzz.sound(["./audio/" + word[1]]);
   kaudio.play();
   $('#kword').html(word[0]);
   $('#english').html(word[3]);
@@ -77,6 +78,7 @@ function checkWord() {
   var input = $('#write').val();
   var output = $('#kword').html();
   if (input == output) {
+    // Give feedback and clear after feedback if correct.
     setTimeout(function(){
       nextWord();
       $('#write').removeClass('correct');
@@ -86,14 +88,19 @@ function checkWord() {
     correct.play();
     $('#write').addClass('correct');
   } else {
+    // Give feedback and clear after feedback if incorrect.
+    setTimeout(function(){  
+      kaudio.play();
+      $('#write').removeClass('wrong');
+      $('#write').val('');
+    }, 450);
     $('#write').addClass('wrong');
     wrong.stop()
     wrong.play();
     $('#write').shake(2, 13, 250);
-    setTimeout(function(){  
-      $('#write').removeClass('wrong');
-      $('#write').val('');
-    }, 500);
-
   }
 }
+
+$( "#kword" ).click(function() {
+  kaudio.play();
+});
