@@ -5,7 +5,6 @@
 
 header {
   height: 50px;
-  box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.15) inset;
 
   background: #34495e;
   color: white;
@@ -43,10 +42,7 @@ nav ul {
       transition: all 0.2s;
     }
 
-    nav ul li:hover a { 
-      box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.15) inset;
-      color: #1abc9c;
-    }
+    nav ul li:hover a { color: #1abc9c; }
     a.active { color: #16a085; }
 
 .dropdown select {
