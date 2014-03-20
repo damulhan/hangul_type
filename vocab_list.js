@@ -14,7 +14,7 @@ var sets = { set_one: [
     ['나오다', 'naoda_H.mp3', 'naoda_M.mp3', 'to come out'],
     ['나이', 'nai_H.mp3', 'nai_M.mp3', 'age'],
     ['누가', 'nuga_H.mp3', 'nuga_M.mp3', 'who'],
-    ['두구', 'nugu_H.mp3', 'nugu_M.mp3', 'who'],
+    ['누구', 'nugu_H.mp3', 'nugu_M.mp3', 'who'],
     ['누나', 'nuna_H.mp3', 'nuna_M.mp3', 'older sister'],
     ['다가가다', 'dagagada_H.mp3', 'dagagada_M.mp3', 'approach to someone'],
     ['다니다', 'danida_H.mp3', 'danida_M.mp3', 'to go to'],
