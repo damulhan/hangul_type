@@ -49,6 +49,29 @@ nav ul {
     }
     a.active { color: #16a085; }
 
+.dropdown select {
+  width: 70px;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 5px;
+  margin-right: 6px;
+
+  box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.15) inset;
+  background: url('arrow.png') no-repeat; 
+  background-position: 48px 8px;
+  background-color: #1abc9c;
+  color: white;
+  
+  font: 12px "Lato", sans-serif;
+  text-indent: 0.01px;
+  text-overflow: "";
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
 #kword {
   margin-top: 40px;
 
