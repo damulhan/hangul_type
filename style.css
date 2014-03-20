@@ -3,13 +3,26 @@
   padding: 0;
 }
 
+header {
+  height: 50px;
+  background: #34495e;
+
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+  header h1 { float: left; }
+  header select { float: right; }
+
 body {
-  font: 12px "NanumGothic", sans-serif;
   background: #ecf0f1;
+
+  font: 12px "NanumGothic", sans-serif;
   color: #2c3e50;
 }
 
 #kword {
+  margin-top: 40px;
+
   text-align: center;
   font-weight: bold;
   font-size: 46px;
@@ -19,12 +32,13 @@ body {
 
 #english {
   margin-bottom: 40px;
+
   color: #7f8c8d;
   text-align: center;
 }
 
-#container {
-  margin: 50px auto;
+.container {
+  margin: 0 auto;
   width: 688px;
 }
 
