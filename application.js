@@ -5,6 +5,7 @@ var shift = false;
 var wrong = new buzz.sound(["./audio/Wrong.ogg"]);
 var correct = new buzz.sound(["./audio/Correct.ogg"]);
 var kaudio
+var set
 
 // Shake effect from https://gist.github.com/hzlzh/3270711
 jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
@@ -53,9 +54,15 @@ function toggleOff () {
   $('.symbol .off').show();
 }
 
+// Select set from hash
+function selectSet() {
+  set = sets[$('select[name="set"]').val()];
+  nextWord();
+}
+
 // Show a word when page loads and wait for response.
 $(document).ready(function() {
-  nextWord();
+  selectSet();
   // Check answer if user hits enter.
   $('#write').keypress(function(key) {
     if (key.which == 13) {
@@ -66,7 +73,7 @@ $(document).ready(function() {
 
 // Show the next word and play audio.
 function nextWord() {
-  var word = setOne.random();
+  var word = set.random();
   kaudio = new buzz.sound(["./audio/" + word[1]]);
   kaudio.play();
   $('#kword').html(word[0]);
@@ -101,6 +108,12 @@ function checkWord() {
   }
 }
 
+// Play audio when clicking the word
 $( "#kword" ).click(function() {
   kaudio.play();
+});
+
+// Change set when dropdown value changes
+$('select[name="set"]').change(function() {
+  selectSet();
 });
