@@ -117,3 +117,8 @@ $( "#kword" ).click(function() {
 $('select[name="set"]').change(function() {
   selectSet();
 });
+
+$('.navigation li a').click(function() {
+  $('.active').removeClass('active');
+  $(this).addClass('active');
+})

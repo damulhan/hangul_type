@@ -9,10 +9,20 @@
   <header>
   <div class="container">
     <h1>Hangul Type</h1>
-    <select name="set">
-      <option value="set_one">Level 1</option>
-      <option value="set_two">Level 2</option>
-    </select>   
+    <nav>
+      <ul class="navigation">
+        <li><a href="#" data-voice="male" class="active">Male</a></li>
+        <li><a href="#" data-voice="female">Female</a></li>
+        <li><a href="#" data-voice="mixed">Mixed</a></li>
+        <li class="dropdown">
+          <select name="set">
+            <option value="set_one">Level 1</option>
+            <option value="set_two">Level 2</option>
+          </select>
+          </ul>
+        </li>
+      </ul> 
+    </nav>  
   </div>
   </header>
   <div class="container">
