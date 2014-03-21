@@ -5,11 +5,6 @@ var shift = false;
 var wrong = new buzz.sound(["./audio/Wrong.ogg","./audio/Wrong.mp3"]);
 var correct = new buzz.sound(["./audio/Correct.ogg","./audio/Wrong.mp3"]);
 
-var kaudio // Korean audio file.
-var set // Store the current set.
-var current_word = 0 // Note the current word out of the total.
-var set_length // Note the total number of words in the current set.
-
 // Shake effect from https://gist.github.com/hzlzh/3270711
 jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
   this.each(function() {
@@ -35,9 +30,6 @@ function shuffle(o){ //v1.0
   return o;
 };
 
-// Detect and react when shift is pressed and released.
-KeyboardJS.on('shift', function() { toggleOn() }, function() { toggleOff() });
-
 // Toggle shift key on.
 function toggleOn () {
   $('.left-shift').addClass('pressed');
@@ -60,27 +52,16 @@ function toggleOff () {
 
 // Select set from hash
 function selectSet() {
-  chosen = sets[$('select[name="set"]').val()];
+  var chosen = sets[$('select[name="set"]').val()];
   set = shuffle(chosen);
   set_length = set.length;
   current_word = 0;
   nextWord();
 }
 
-// Show a word when page loads and wait for response.
-$(document).ready(function() {
-  selectSet();
-  // Check answer if user hits enter.
-  $('.write').keypress(function(key) {
-    if (key.which == 13) {
-      checkWord();
-    }
-  });
-});
-
 // Show the next word and play audio.
 function nextWord() {
-  word = set[current_word];
+  var word = set[current_word];
   current_word++;
   kaudio = new buzz.sound(["./audio/" + word[1]]);
   kaudio.play();
@@ -118,6 +99,17 @@ function checkWord() {
   }
 }
 
+// Show a word when page loads and wait for response.
+$(document).ready(function() {
+  selectSet();
+  // Check answer if user hits enter.
+  $('.write').keypress(function(key) {
+    if (key.which == 13) {
+      checkWord();
+    }
+  });
+});
+
 // Play audio when clicking the word
 $( ".kword" ).click(function() {
   kaudio.play();
@@ -132,3 +124,6 @@ $('.navigation li a').click(function() {
   $('.active').removeClass('active');
   $(this).addClass('active');
 });
+
+// Detect and react when shift is pressed and released.
+KeyboardJS.on('shift', function() { toggleOn() }, function() { toggleOff() });
