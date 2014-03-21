@@ -2,8 +2,8 @@
 var shift = false;
 
 // Set sounds for answer feedback.
-var wrong = new buzz.sound(["./audio/Wrong.ogg"]);
-var correct = new buzz.sound(["./audio/Correct.ogg"]);
+var wrong = new buzz.sound(["./audio/Wrong.ogg","./audio/Wrong.mp3"]);
+var correct = new buzz.sound(["./audio/Correct.ogg","./audio/Wrong.mp3"]);
 
 var kaudio // Korean audio file.
 var set // Store the current set.
