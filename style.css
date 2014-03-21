@@ -69,7 +69,7 @@ nav ul {
 }
 
 #kword {
-  margin-top: 40px;
+  margin-top: 15px;
 
   text-align: center;
   font-weight: bold;
@@ -82,12 +82,27 @@ nav ul {
   margin-bottom: 40px;
 
   color: #7f8c8d;
+
+  font: 16px "Lato", sans-serif;
   text-align: center;
 }
 
 .container {
   width: 688px;
   margin: 0 auto;
+}
+
+.count {
+  margin-top: 10px;
+  font: 16px "Lato", sans-serif;
+  color: #7f8c8d;
+  display: block;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.current {
+  font-weight: bold;
 }
 
 /*Text Box*/
@@ -98,7 +113,7 @@ nav ul {
   height: 50px;
   width: 669px;
 
-  border: 2px solid #ecf0f1;
+  border: 2px solid white;
   background: #fff;
 
   font-size: 18px;

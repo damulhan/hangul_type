@@ -4,8 +4,11 @@ var shift = false;
 // Set sounds for answer feedback.
 var wrong = new buzz.sound(["./audio/Wrong.ogg"]);
 var correct = new buzz.sound(["./audio/Correct.ogg"]);
-var kaudio
-var set
+
+var kaudio // Korean audio file.
+var set // Store the current set.
+var current_word = 0 // Note the current word out of the total.
+var set_length // Note the total number of words in the current set.
 
 // Shake effect from https://gist.github.com/hzlzh/3270711
 jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
@@ -26,10 +29,11 @@ jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
   return this;
 };
 
-// Get a random object from an array.
-Array.prototype.random = function() {
-  return this[Math.floor(Math.random() * this.length)];
-}
+// Shuffle the array.
+function shuffle(o){ //v1.0
+  for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+  return o;
+};
 
 // Detect and react when shift is pressed and released.
 KeyboardJS.on('shift', function() { toggleOn() }, function() { toggleOff() });
@@ -56,7 +60,10 @@ function toggleOff () {
 
 // Select set from hash
 function selectSet() {
-  set = sets[$('select[name="set"]').val()];
+  chosen = sets[$('select[name="set"]').val()];
+  set = shuffle(chosen);
+  set_length = set.length;
+  current_word = 0;
   nextWord();
 }
 
@@ -73,12 +80,15 @@ $(document).ready(function() {
 
 // Show the next word and play audio.
 function nextWord() {
-  var word = set.random();
+  word = set[current_word];
+  current_word++;
   kaudio = new buzz.sound(["./audio/" + word[1]]);
   kaudio.play();
   $('#kword').html(word[0]);
   $('#english').html(word[3]);
-}
+  $('.current').html(current_word);
+  $('.total').html(set_length);    
+};
 
 // Check if the typed word is correct.
 function checkWord() {
@@ -121,4 +131,4 @@ $('select[name="set"]').change(function() {
 $('.navigation li a').click(function() {
   $('.active').removeClass('active');
   $(this).addClass('active');
-})
+});
