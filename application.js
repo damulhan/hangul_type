@@ -71,7 +71,7 @@ function selectSet() {
 $(document).ready(function() {
   selectSet();
   // Check answer if user hits enter.
-  $('#write').keypress(function(key) {
+  $('.write').keypress(function(key) {
     if (key.which == 13) {
       checkWord();
     }
@@ -84,42 +84,42 @@ function nextWord() {
   current_word++;
   kaudio = new buzz.sound(["./audio/" + word[1]]);
   kaudio.play();
-  $('#kword').html(word[0]);
-  $('#english').html(word[3]);
+  $('.kword').html(word[0]);
+  $('.english').html(word[3]);
   $('.current').html(current_word);
   $('.total').html(set_length);    
 };
 
 // Check if the typed word is correct.
 function checkWord() {
-  var input = $('#write').val();
-  var output = $('#kword').html();
+  var input = $('.write').val();
+  var output = $('.kword').html();
   if (input == output) {
     // Give feedback and clear after feedback if correct.
     setTimeout(function(){
       nextWord();
-      $('#write').removeClass('correct');
-      $('#write').val('');
+      $('.write').removeClass('correct');
+      $('.write').val('');
     }, 1000);
     correct.stop();
     correct.play();
-    $('#write').addClass('correct');
+    $('.write').addClass('correct');
   } else {
     // Give feedback and clear after feedback if incorrect.
     setTimeout(function(){  
       kaudio.play();
-      $('#write').removeClass('wrong');
-      $('#write').val('');
+      $('.write').removeClass('wrong');
+      $('.write').val('');
     }, 450);
-    $('#write').addClass('wrong');
+    $('.write').addClass('wrong');
     wrong.stop()
     wrong.play();
-    $('#write').shake(2, 13, 250);
+    $('.write').shake(2, 13, 250);
   }
 }
 
 // Play audio when clicking the word
-$( "#kword" ).click(function() {
+$( ".kword" ).click(function() {
   kaudio.play();
 });
 

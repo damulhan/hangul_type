@@ -29,10 +29,11 @@
     <span class="count">
       <span class="current"></span>/<span class="total"></span>
     </span>
-    <div id="kword"></div>
+    <span class="kword"></span>
     <audio autoplay id="kaudio" src="" type="audio/mpeg"></audio>  
-    <div id="english"></div>
-    <input id="write" rows="6" cols="60"></textarea>
+    <span class="english"></span>
+    <input class="write" rows="6" cols="60"></textarea>
+
     <ul class="keyboard">
       <li class="symbol"><span class="off">`</span><span class="on">~</span></li>
       <li class="symbol"><span class="off">1</span><span class="on">!</span></li>
@@ -65,16 +66,16 @@
       <li class="last symbol"><span class="off">\</span><span class="on">|</span></li>
 
       <li class="capslock"><span>Caps Lock</span></li>
-      <li class="pinky home"><span class="off">ㅁ</span></li>
-      <li class="ring home"><span class="off">ㄴ</span></li>
-      <li class="middle home"><span class="off">ㅇ</span></li>
-      <li class="index home"><span class="off">ㄹ</span></li>
+      <li class="pinky home-row"><span class="off">ㅁ</span></li>
+      <li class="ring home-row"><span class="off">ㄴ</span></li>
+      <li class="middle home-row"><span class="off">ㅇ</span></li>
+      <li class="index home-row"><span class="off">ㄹ</span></li>
       <li class="index"><span class="off">ㅎ</span></li>
       <li class="index"><span class="off">ㅗ</span></li>
-      <li class="index home"><span class="off">ㅓ</span></li>
-      <li class="middle home"><span class="off">ㅏ</span></li>
-      <li class="ring home"><span class="off">ㅣ</span></li>
-      <li class="pinky home"><span class="off">;</span><span class="on">:</span></li>
+      <li class="index home-row"><span class="off">ㅓ</span></li>
+      <li class="middle home-row"><span class="off">ㅏ</span></li>
+      <li class="ring home-row"><span class="off">ㅣ</span></li>
+      <li class="pinky home-row"><span class="off">;</span><span class="on">:</span></li>
       <li><span class="off">'</span><span class="on">"</span></li>
       <li class="last enter"><span>Enter</span></li>
 
@@ -98,7 +99,7 @@
   <script src="buzz.min.js"></script>
   <script src="hangulime.min.js"></script>
   <script>
-    $('#write').hangulime();
+    $('.write').hangulime();
   </script>
   <script src="keyboard.min.js"></script>
   <script src="application.js"></script>
