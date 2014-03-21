@@ -95,6 +95,10 @@ nav ul {
   -moz-appearance: none;
   outline: none;
   cursor: pointer;
+
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 // COUNTER
