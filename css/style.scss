@@ -110,7 +110,8 @@ nav ul {
 
 // WORD PROMPT
 .kword {
-  display: block;
+  display: table;
+  margin: auto;
 
   text-align: center;
   font-weight: bold;
@@ -120,7 +121,8 @@ nav ul {
 }
 
 .english {
-  display: block;
+  display: table;
+  margin: auto;
   margin-bottom: 40px;
 
   color: #7f8c8d;
