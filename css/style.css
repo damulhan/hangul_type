@@ -1,1 +1,175 @@
-*{margin:0;padding:0}body{background:#ecf0f1;color:#2c3e50;font:12px "NanumGothic",sans-serif}.container{width:688px;margin:0 auto}header{height:50px;background:#34495e;color:#fff;line-height:50px;font-family:"Lato",sans-serif}header h1{float:left;-webkit-transition:all .5s;transition:all .5s}header h1:hover{color:#1abc9c;cursor:default}header ul{float:right}nav ul{list-style:none;position:relative;display:inline-table}nav ul li{float:left}nav ul a{display:block;padding-right:20px;color:#fff;text-decoration:none;-webkit-transition:all .2s;transition:all .2s}nav ul a:hover,nav ul a.active{color:#1abc9c}.dropdown select{width:70px;border:0;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:8px 5px;margin-right:6px;box-shadow:0 -2px 0 rgba(0,0,0,0.15) inset;background:url("../arrow.png") no-repeat;background-position:48px 8px;background-color:#1abc9c;color:#fff;font:12px "Lato",sans-serif;text-indent:.01px;text-overflow:'';-webkit-appearance:none;-moz-appearance:none;outline:none;cursor:pointer}.dropdown select::-ms-expand{display:none}.count{margin:10px 8px;display:block;color:#7f8c8d;text-align:right}.count .current{font-weight:bold}.kword{display:table;margin:auto;text-align:center;font-weight:bold;font-size:46px;cursor:pointer}.english{display:table;margin:auto;margin-bottom:40px;color:#7f8c8d;font:16px "Lato",sans-serif;text-align:center}.write{margin-bottom:8px;padding:5px;height:50px;width:667px;outline:none;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:2px solid #fff;background:#fff;font-weight:bold;text-align:center;line-height:50px;font:22px "NanumGothic",sans-serif}.write.correct{color:#2ecc71;border-color:#2ecc71}.write.wrong{color:#e74e3e;border-color:#e74e3e}.keyboard{list-style:none}.keyboard li{float:left;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;margin:0 5px 5px 0;width:42px;height:42px;box-shadow:0 -2px 0 rgba(0,0,0,0.15) inset;background:#fff;line-height:40px;text-align:center}.keyboard li span{cursor:default}.keyboard li.home-row{background:#bdc3c7}.keyboard .pinky{background:#e67e22}.keyboard .ring{background:#3498db}.keyboard .middle{background:#1abc9c}.keyboard .index{background:#9b59b6}.keyboard .pressed{background:#34495e;color:#fff}.keyboard .capslock,.keyboard .tab,.keyboard .left-shift{clear:left}.keyboard .tab,.keyboard .backspace{width:70px}.keyboard .capslock{width:80px}.keyboard .enter{width:77px}.keyboard .left-shift{width:94px}.keyboard .right-shift{width:110px}.keyboard .on{display:none}.keyboard .multiple .on{color:#fff}
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #ecf0f1;
+  color: #2c3e50;
+  font: 12px "NanumGothic", sans-serif; }
+
+.container {
+  width: 688px;
+  margin: 0 auto; }
+
+header {
+  height: 50px;
+  background: #34495e;
+  color: #fff;
+  line-height: 50px;
+  font-family: "Lato", sans-serif; }
+  header h1 {
+    float: left;
+    -webkit-transition: all .5s;
+    transition: all .5s; }
+    header h1:hover {
+      color: #1abc9c;
+      cursor: default; }
+  header ul {
+    float: right; }
+
+nav ul {
+  list-style: none;
+  position: relative;
+  display: inline-table; }
+  nav ul li {
+    float: left; }
+  nav ul a {
+    display: block;
+    padding-right: 20px;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
+  nav ul a:hover,
+  nav ul a.active {
+    color: #1abc9c; }
+
+.dropdown select {
+  width: 70px;
+  border: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 8px 5px;
+  margin-right: 6px;
+  box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
+  background: url("../arrow.png") no-repeat;
+  background-position: 48px 8px;
+  background-color: #1abc9c;
+  color: #fff;
+  font: 12px "Lato", sans-serif;
+  text-indent: .01px;
+  text-overflow: '';
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer; }
+  .dropdown select::-ms-expand {
+    display: none; }
+
+.count {
+  margin: 10px 8px;
+  display: block;
+  color: #7f8c8d;
+  text-align: right; }
+  .count .current {
+    font-weight: bold; }
+
+.kword {
+  display: table;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 46px;
+  cursor: pointer; }
+
+.english {
+  display: table;
+  margin: auto;
+  margin-bottom: 40px;
+  color: #7f8c8d;
+  font: 16px "Lato", sans-serif;
+  text-align: center; }
+
+.write {
+  margin-bottom: 8px;
+  padding: 5px;
+  height: 50px;
+  width: 667px;
+  outline: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  background: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  font: 22px "NanumGothic", sans-serif; }
+  .write.correct {
+    color: #2ecc71;
+    border-color: #2ecc71; }
+  .write.wrong {
+    color: #e74e3e;
+    border-color: #e74e3e; }
+
+.progress {
+  height: 6px;
+  margin: 0 8px 4px 0;
+  border-radius: 4px;
+  overflow: hidden; }
+
+.progress-bar {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background: #bdc3c7; }
+
+.keyboard {
+  list-style: none; }
+  .keyboard li {
+    float: left;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 0 5px 5px 0;
+    width: 42px;
+    height: 42px;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
+    background: #fff;
+    line-height: 40px;
+    text-align: center; }
+    .keyboard li span {
+      cursor: default; }
+  .keyboard li.home-row {
+    background: #bdc3c7; }
+  .keyboard .pinky {
+    background: #e67e22; }
+  .keyboard .ring {
+    background: #3498db; }
+  .keyboard .middle {
+    background: #1abc9c; }
+  .keyboard .index {
+    background: #9b59b6; }
+  .keyboard .pressed {
+    background: #34495e;
+    color: #fff; }
+  .keyboard .capslock,
+  .keyboard .tab,
+  .keyboard .left-shift {
+    clear: left; }
+  .keyboard .tab,
+  .keyboard .backspace {
+    width: 70px; }
+  .keyboard .capslock {
+    width: 80px; }
+  .keyboard .enter {
+    width: 77px; }
+  .keyboard .left-shift {
+    width: 94px; }
+  .keyboard .right-shift {
+    width: 110px; }
+  .keyboard .on {
+    display: none; }
+  .keyboard .multiple .on {
+    color: #fff; }

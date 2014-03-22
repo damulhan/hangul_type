@@ -163,6 +163,23 @@ nav ul {
   }
 }
 
+// PROGRESS BAR
+.progress {
+  height: 6px;
+  margin: 0 8px 4px 0;
+  border-radius: 4px;
+
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+
+  background: #bdc3c7;
+}
+
 // KEYBOARD
 .keyboard {
   list-style: none;

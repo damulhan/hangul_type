@@ -50,6 +50,17 @@ function toggleOff () {
   $('.symbol .off').show();
 }
 
+// Decrease the timer bar over 5 seconds.
+function decreaseTimer() {
+  $('.progress-bar').animate({'width':'0%'},5000);
+}
+
+// Reset the timer bar over .2 seconds.
+function resetTimer() {
+  $('.progress-bar').stop();
+  $('.progress-bar').animate({'width':'100%'}, 200);
+}
+
 // Select set from hash
 function selectSet() {
   var chosen = sets[$('select[name="set"]').val()];
@@ -68,7 +79,8 @@ function nextWord() {
   $('.kword').html(word[0]);
   $('.english').html(word[3]);
   $('.current').html(current_word);
-  $('.total').html(set_length);    
+  $('.total').html(set_length);
+  decreaseTimer();   
 };
 
 // Check if the typed word is correct.
@@ -84,6 +96,7 @@ function checkWord() {
     }, 1000);
     correct.stop();
     correct.play();
+    resetTimer();
     $('.write').addClass('correct');
   } else {
     // Give feedback and clear after feedback if incorrect.
