@@ -67,6 +67,7 @@ function selectSet() {
   set = shuffle(chosen);
   set_length = set.length;
   current_word = 0;
+  resetTimer();
   nextWord();
 }
 
