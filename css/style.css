@@ -105,7 +105,9 @@ nav ul {
   font-weight: bold;
   text-align: center;
   line-height: 50px;
-  font: 22px "NanumGothic", sans-serif; }
+  font: 22px "NanumGothic", sans-serif;
+  -webkit-transition: border .2s;
+  transition: border .2s; }
   .write.correct {
     color: #2ecc71;
     border-color: #2ecc71; }
