@@ -4,6 +4,7 @@ var shift = false;
 // Set sounds for answer feedback.
 var wrong = new buzz.sound(["./audio/Wrong.ogg","./audio/Wrong.mp3"]);
 var correct = new buzz.sound(["./audio/Correct.ogg","./audio/Wrong.mp3"]);
+var voice = 1;
 
 // Shake effect from https://gist.github.com/hzlzh/3270711
 jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
@@ -73,9 +74,9 @@ function selectSet() {
 
 // Show the next word and play audio.
 function nextWord() {
-  var word = set[current_word];
+  word = set[current_word];
   current_word++;
-  kaudio = new buzz.sound(["./audio/" + word[1]]);
+  kaudio = new buzz.sound(["./audio/" + word[voice]]);
   kaudio.play();
   $('.kword').html(word[0]);
   $('.english').html(word[3]);
@@ -134,9 +135,13 @@ $('select[name="set"]').change(function() {
   selectSet();
 });
 
+// Change voice between male and female
 $('.navigation li a').click(function() {
   $('.active').removeClass('active');
   $(this).addClass('active');
+  if ($(this).data('voice') == 'male') { voice = 1; } else { voice = 2; }
+  kaudio = new buzz.sound(["./audio/" + word[voice]]);
+  kaudio.play();
 });
 
 // Detect and react when shift is pressed and released.

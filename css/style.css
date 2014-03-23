@@ -68,7 +68,7 @@ nav ul {
     display: none; }
 
 .count {
-  margin: 10px 8px;
+  margin: 15px 8px;
   display: block;
   color: #7f8c8d;
   text-align: right; }
@@ -86,7 +86,7 @@ nav ul {
 .english {
   display: table;
   margin: auto;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   color: #7f8c8d;
   font: 16px "Lato", sans-serif;
   text-align: center; }
