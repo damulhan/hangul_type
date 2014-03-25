@@ -15,6 +15,7 @@ header {
   height: 50px;
   background: #34495e;
   color: #fff;
+  border-bottom: 2px solid #d4d8d8;
   line-height: 50px;
   font-family: "Lato", sans-serif; }
   header h1 {
@@ -125,7 +126,7 @@ nav ul {
   height: 100%;
   width: 100%;
   border-radius: 5px;
-  background: #bdc3c7; }
+  background: #d4d8d8; }
 
 .keyboard {
   list-style: none; }
